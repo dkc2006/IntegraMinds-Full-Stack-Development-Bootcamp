@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Form</title>
+  </head>
+  <body>
+    <h2>User Registration Form</h2>
+    <form
+      action="/submit_registration_form"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="firstname">First Name:</label><br />
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          required
+        /><br /><br />
+
+        <label for="middlename">Middle Name:</label><br />
+        <input type="text" id="middlename" name="middlename" /><br /><br />
+
+        <label for="lastname">Last Name:</label><br />
+        <input type="text" id="lastname" name="lastname" required /><br /><br />
+
+        <label for="email">Email ID:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+        /><br /><br />
+
+        <label for="confirmpassword">Confirm Password:</label><br />
+        <input
+          type="password"
+          id="confirmpassword"
+          name="confirmpassword"
+          required
+        /><br /><br />
+
+        <label for="dob">Date of Birth:</label><br />
+        <input type="date" id="dob" name="dob" required /><br /><br />
+
+        <label for="gender">Gender:</label><br />
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option></select
+        ><br /><br />
+
+        <label for="hobbies">Hobbies:</label><br />
+        <input type="checkbox" id="reading" name="hobbies" value="reading" />
+        <label for="reading">Reading</label><br />
+        <input type="checkbox" id="writing" name="hobbies" value="writing" />
+        <label for="writing">Writing</label><br />
+        <input type="checkbox" id="music" name="hobbies" value="music" />
+        <label for="music">Listening to Music</label><br />
+        <input type="checkbox" id="movies" name="hobbies" value="movies" />
+        <label for="movies">Watching Movies</label><br />
+        <input type="checkbox" id="otherhobby" name="hobbies" value="other" />
+        <label for="otherhobby">Other</label><br /><br />
+
+        <label for="address">Address:</label><br />
+        <input
+          type="text"
+          id="housenumber"
+          name="housenumber"
+          placeholder="House Number"
+          required
+        /><br />
+        <input
+          type="text"
+          id="street"
+          name="street"
+          placeholder="Street"
+          required
+        /><br />
+        <input
+          type="text"
+          id="city"
+          name="city"
+          placeholder="City"
+          required
+        /><br />
+        <select id="state" name="state" required>
+          <option value="">Select State</option>
+          <!-- Add options for states --></select
+        ><br />
+        <select id="country" name="country" required>
+          <option value="">Select Country</option>
+          <!-- Add options for countries --></select
+        ><br />
+        <input
+          type="text"
+          id="pincode"
+          name="pincode"
+          placeholder="Pincode"
+          pattern="[0-9]{6}"
+          required
+        /><br /><br />
+
+        <label for="profilepic">Profile Picture:</label><br />
+        <input
+          type="file"
+          id="profilepic"
+          name="profilepic"
+          accept="image/*"
+          required
+        /><br /><br />
+
+        <label for="aboutme">About Me:</label><br />
+        <textarea
+          id="aboutme"
+          name="aboutme"
+          rows="5"
+          cols="40"
+          maxlength="500"
+          required
+        ></textarea
+        ><br /><br />
+
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
