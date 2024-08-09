@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Interface</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .chat-item::before {
+        position: absolute;
+        --chat-icon-size: 10px;
+        content: "";
+        width: 0;
+        height: 0;
+        top: -10px;
+        border-right: var(--chat-icon-size) solid transparent;
+        border-bottom: var(--chat-icon-size) solid transparent;
+      }
+      .chat-item {
+        position: relative;
+        max-width: 50%;
+        background-color: purple;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+      }
+      /* -------------------------------  */
+      ul {
+        list-style: none;
+      }
+      /* ul li::before {
+        content: "✅";
+      }*/
+
+      ul li::after {
+        content: "✅";
+      }
+    </style>
   </head>
   <body>
-    <div class="chat-container">
+    <!-- <div class="chat-container">
       <div class="chat-header">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd5dEJTK7KtH3aMpecKLPXspCNWHicx3wz7A&s"
@@ -44,6 +75,20 @@
           alt="Send"
         />
       </div>
+    </div> -->
+
+    <br />
+    <br />
+    <div class="chat">
+      <div class="chat-item">Yo!</div>
     </div>
+
+    <ul>
+      <li>List 1</li>
+      <li>List 2</li>
+      <li>List 3</li>
+      <li>List 4</li>
+      <li>List 5</li>
+    </ul>
   </body>
 </html>
