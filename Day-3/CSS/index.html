@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .card {
+        background-color: rgb(233, 233, 233);
+        position: relative;
+        width: 350px;
+        min-height: 100px;
+        border: 1px solid black;
+      }
+      
+      .offer {
+        border: 1px solid blue;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgb(255, 0, 0);
+        /* padding: 10px 20px 30px 40px; */
+        /* margin: 5px 10px 15px 20px; */
+        margin: 0px;
+      }
+      
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .card .content {
+        padding: 10px;
+      }
+      
+      div.card.card-sm {
+        width: 200px !important;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+      <div class="card card-sm" style="width: 500px">
+        <img src="./assets/watch.jpg" />
+        <div class="content">
+          <h1>Styling With CSS</h1>
+          <p>Let's Start this paragraph with CSS</p>
+        </div>
+        <span class="offer">20% offer</span>
+    </div>
+  </body>
+</html>
