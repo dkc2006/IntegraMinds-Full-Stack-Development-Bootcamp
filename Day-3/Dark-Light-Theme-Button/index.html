@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Default light theme styles */
+      body.light-theme {
+        background-color: white;
+        color: black;
+      }
+
+      /* Dark theme styles */
+      body.dark-theme {
+        background-color: black;
+        color: white;
+      }
+
+      .component {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="light-theme">
+    <div class="component">
+      <h2>Theme Switcher</h2>
+      <button onclick="switchTheme('light')">Light</button>
+      <button onclick="switchTheme('dark')">Dark</button>
+      <br />
+      <br />
+      <div>Try changing the theme and start having fun with the dark mode.</div>
+    </div>
+
+    <script>
+      function switchTheme(theme) {
+        if (theme === "light") {
+          document.body.className = "light-theme";
+        } else if (theme === "dark") {
+          document.body.className = "dark-theme";
+        }
+      }
+    </script>
+  </body>
+</html>
