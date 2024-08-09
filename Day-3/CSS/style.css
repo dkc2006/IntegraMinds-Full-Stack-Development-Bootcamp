@@ -1,0 +1,18 @@
+#section1{
+    background-color: blue;
+}
+#section2{
+    background-color: blue;
+    position: sticky;
+    top: 10px;
+}
+#section3{
+    background-color: blue;
+    position: sticky;
+    top: 10px;
+}
+#section4{
+    background-color: blue;
+    position: sticky;
+    bottom: 10px;
+}
