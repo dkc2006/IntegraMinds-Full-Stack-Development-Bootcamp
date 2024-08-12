@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+    <style>
+      * {
+        color: white;
+        text-align: center;
+      }
+
+      li {
+        text-align: left;
+      }
+      body::before {
+        --_line-size: 0.5px;
+        --_line-color: #fff;
+        --_bg-size: 1.5rem;
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            var(--_line-color) var(--_line-size),
+            transparent var(--_line-size),
+            transparent calc(100% - var(--_line-size)),
+            var(--_line-color) calc(100% - var(--_line-size))
+          ),
+          linear-gradient(
+            90deg,
+            var(--_line-color) var(--_line-size),
+            transparent var(--_line-size),
+            transparent calc(100% - var(--_line-size)),
+            var(--_line-color) calc(100% - var(--_line-size))
+          );
+        background-size: var(--_bg-size) var(--_bg-size);
+        mask-image: linear-gradient(to bottom, #000, #0000);
+        opacity: 0.07;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #fff;
+        background: linear-gradient(
+          180deg,
+          var(--blue-800),
+          var(--neutral-light-800) 90%
+        );
+      }
+      button {
+        background-color: rgb(4, 124, 244);
+        padding: 15px;
+        border: 2px solid;
+        border-radius: 50% 10% / 10% 50%;
+        margin: 4px 2px;
+      }
+      button:hover {
+        background-color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body style="background: linear-gradient(rgb(53, 53, 239), rgb(0, 0, 47))">
+    <div style="max-width: 550px; margin: auto; height: 900px">
+      <h1>Logging messages</h1>
+      <p>Open the console to see the messages</p>
+      <button>Log messages</button>
+      <button>Warn message</button>
+      <button>Error Message</button>
+      <button>Info Message</button>
+      <br />
+      <button>Clear Console</button>
+      <button>Assert</button>
+      <button>Table</button>
+      <button>Table</button>
+      <button>Group</button>
+      <button>Custom Style</button>
+      <br />
+      <button>Cause 404 Error</button>
+      <button>Cause Error</button>
+      <button>Cause Victation</button>
+      <p style="text-align: left"><b>To open the console:</b></p>
+      <ul>
+        <li><b>Right click on the page and select "Inspect"</b></li>
+        <li><b>Press F12 or Ctrl + Shift + l</b></li>
+        <li><b>Press F12 or Cmd + Option + l on Mac</b></li>
+      </ul>
+    </div>
+  </body>
+</html>
