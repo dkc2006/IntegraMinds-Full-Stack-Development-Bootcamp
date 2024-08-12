@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        color: red;
+        display: block;
+      }
+      [target="_blank"]::after {
+        content: "";
+        display: inline-block;
+        color: blue;
+        width: 20px;
+        height: 20px;
+        background: url(/Day-3/CSS/assets/download.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: auto 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <a href="#">Home</a>
+      <a href="/Day-2/template.html" target="_blank">About</a>
+      <a href="#">Services</a>
+      <a href="#" target="_self">Contact</a>
+      <a href="#" target="_blank">Help</a>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timetable</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .time {
+        width: 10%;
+      }
+      .break,
+      .lunch {
+        background-color: #f2f2f2;
+      }
+      .subject {
+        background-color: #e6e6fa;
+      }
+      .topic {
+        background-color: #fafad2;
+      }
+      .pe {
+        background-color: #add8e6;
+      }
+      .register {
+        background-color: #ffb6c1;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>School Timetable</h2>
+
+    <table>
+      <tr>
+        <th class="time">Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+      <tr>
+        <td>8:30 - 8:35</td>
+        <td class="register">Register</td>
+        <td class="register">Register</td>
+        <td class="register">Register</td>
+        <td class="register">Register</td>
+        <td class="register">Register</td>
+      </tr>
+      <tr>
+        <td>8:35 - 9:05</td>
+        <td class="subject">Guided Reading Rotation</td>
+        <td class="subject">Guided Reading Rotation</td>
+        <td class="subject">Guided Reading Rotation</td>
+        <td class="subject">Art</td>
+        <td class="subject">Guided Reading Rotation</td>
+      </tr>
+      <tr>
+        <td>9:05 - 10:00</td>
+        <td class="subject">Literacy</td>
+        <td class="subject">Literacy</td>
+        <td class="subject">Literacy</td>
+        <td class="subject">Kiswahili</td>
+        <td class="subject">Literacy</td>
+      </tr>
+      <tr class="break">
+        <td>10:00 - 10:30</td>
+        <td colspan="5">Morning Break</td>
+      </tr>
+      <tr>
+        <td>10:30 - 11:00</td>
+        <td class="subject">Literacy</td>
+        <td class="subject">Literacy</td>
+        <td class="subject">Literacy</td>
+        <td class="subject">Grammar</td>
+        <td class="subject">Literacy</td>
+      </tr>
+      <tr>
+        <td>11:00 - 12:00</td>
+        <td class="subject">Numeracy</td>
+        <td class="subject">Numeracy</td>
+        <td class="subject">Numeracy</td>
+        <td class="subject">Numeracy</td>
+        <td class="subject">Numeracy</td>
+      </tr>
+      <tr class="lunch">
+        <td>12:00 - 13:00</td>
+        <td colspan="5">Lunch</td>
+      </tr>
+      <tr>
+        <td>13:00 - 13:15</td>
+        <td class="topic">Philosophy</td>
+        <td class="subject">Spellings</td>
+        <td class="subject">Spellings</td>
+        <td class="subject">Spellings</td>
+        <td class="subject">Spelling Test</td>
+      </tr>
+      <tr>
+        <td>13:15 - 13:45</td>
+        <td class="topic">Science</td>
+        <td class="topic">Science</td>
+        <td class="topic">Topic (History/Geography)</td>
+        <td class="topic">PSHE/Citizenship</td>
+        <td class="topic">Golden Time</td>
+      </tr>
+      <tr>
+        <td>13:45 - 14:30</td>
+        <td class="topic">Music (DCM)</td>
+        <td class="topic">Topic (History/Geography)</td>
+        <td class="topic">Topic (History/Geography)</td>
+        <td class="topic">Topic (History/Geography)</td>
+        <td class="pe">PE (1:45-2:30)</td>
+      </tr>
+    </table>
+  </body>
+</html>
