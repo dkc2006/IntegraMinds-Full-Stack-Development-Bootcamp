@@ -1,0 +1,40 @@
+{
+  "name": "Sagar Rajput",
+  "age": 18,
+  "dob": "18 / 10 / 2002",
+  "address": [
+    {
+      "street": "tarang",
+      "city": "Mathura",
+      "state": "UP"
+    },
+    {
+      "street": "123 Main St",
+      "city": "agra",
+      "state": "UP"
+    }
+  ],
+  "educations": [
+    {
+      "institution": "GLA University",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "year": 2022
+    },
+    {
+      "institution": "saraswati vidya mandir",
+      "field": "Mathematic",
+      "year": 2019
+    }
+  ],
+  "skills": ["JavaScript", "React", "Node.js", "Flutter"],
+  "experiences": [
+    {
+      "company": "Morbid Technology",
+      "position": "Software Developer",
+      "duration": "2 months",
+      "description":
+        "Worked on various projects related to web development."
+    }
+  ]
+}

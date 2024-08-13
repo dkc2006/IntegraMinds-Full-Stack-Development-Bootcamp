@@ -4,34 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Resume</title>
-    <style></style>
   </head>
   <body>
+    <h1>My Resume</h1>
+    <div>
+      <pre id="resume">This is a resume</pre>
+    </div>
     <script>
       //javascript code goes here
-
-      console.log("welcome to GLA");
-      const amount = 20;
-      console.log("🚀 ~ amount:", amount);
-
-      const userNames = [
-        "user101",
-        "user102",
-        "user103",
-        "user107",
-        "user108-1",
-        { key: amount },
-        [],
-        10,
-        45,
-        20.0,
-        "user104",
-        "user105",
-      ];
-      console.log("🚀 ~ userNames:", userNames);
-      console.log(userNames[4]);
-      console.log(userNames[5]["key"]);
-
       /*Resume*/
       const resume = {
         name: "Sagar Rajput",
@@ -87,7 +67,13 @@
         "🚀 ~ resume['educations'][0]['degree']:",
         resume["educations"][0]["degree"]
       );
-      console.log("🚀 ~ phoneNo:", phoneNo);
+      console.log("🚀 ~ phoneNo:", resume.phoneNo);
+
+      var address = resume.address;
+      var phoneNo = resume["phoneNo"];
+
+      const resumePreTag = document.querySelector("#resume");
+      resumePreTag.innerHTML = JSON.stringify(resume, null, 2);
     </script>
   </body>
 </html>
