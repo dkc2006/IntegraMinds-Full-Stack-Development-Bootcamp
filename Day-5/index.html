@@ -13,6 +13,65 @@
       console.log("welcome to GLA");
       const amount = 20;
       console.log("🚀 ~ amount:", amount);
+
+      const userNames = [
+        "user101",
+        "user102",
+        "user103",
+        "user107",
+        "user108-1",
+        { key: amount },
+        [],
+        10,
+        45,
+        20.0,
+        "user104",
+        "user105",
+      ];
+      console.log("🚀 ~ userNames:", userNames);
+      console.log(userNames[4]);
+      console.log(userNames[5]["key"]);
+
+      /*Resume*/
+      const resume = {
+        name: "John Doe",
+        age: 30,
+        dob: 12 / 2 / 24,
+        address: {
+          street: "123 Main St",
+          city: "New York",
+          state: "NY",
+          zip: 12345,
+        },
+        education: [
+          {
+            institution: "ABC University",
+            degree: "Bachelor of Science",
+            field: "Computer Science",
+            year: 2015,
+          },
+          {
+            institution: "XYZ College",
+            degree: "Master of Science",
+            field: "Computer Science",
+            year: 2019,
+          },
+        ],
+        skills: ["JavaScript", "React", "Node.js", "Redux"],
+        experience: [
+          {
+            company: "ABC Corp",
+            position: "Software Engineer",
+            duration: "6 months",
+            description:
+              "Worked on various projects related to web development.",
+          },
+          {
+            company: "XYZ",
+          },
+        ],
+      };
+      console.log(resume);
     </script>
   </body>
 </html>
