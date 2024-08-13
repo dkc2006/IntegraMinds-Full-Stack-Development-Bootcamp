@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursors Example</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+      }
+
+      .wrapper {
+        text-align: center;
+        color: #ff6347; /* Title color */
+      }
+
+      h1 {
+        font-family: "Almendra SC", serif; /* Substitute with an appropriate Gothic or Blackletter font */
+        font-size: 48px;
+        color: #e53935; /* This color is close to the red shade in the image */
+        letter-spacing: 1px; /* Slightly increase letter spacing */
+        border-radius: 5px;
+        text-align: center;
+        padding: 20px;
+      }
+
+      p {
+        text-align: center;
+        color: white;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color: black;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+        height: 90px;
+        font-family: "Comic Sans MS", "Brush Script MT", cursive;
+      }
+
+      .box:hover {
+        background-color: rgb(219, 29, 29);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Cursors</h1>
+      <p>Hover over the cursor to see the effect</p>
+      <div class="container">
+        <div class="box" style="cursor: pointer">👆cursor: pointer</div>
+        <div class="box" style="cursor: help">❓cursor: help</div>
+        <div class="box" style="cursor: url('rocket.png'), auto">
+          🚀 cursor: url('./rocket.png'), auto
+        </div>
+        <div class="box" style="cursor: progress">⌛ cursor: progress</div>
+        <div class="box" style="cursor: wait">⌛cursor: wait</div>
+        <div class="box" style="cursor: text">cursor: text</div>
+        <div class="box" style="cursor: vertical-text">
+          cursor: vertical-text
+        </div>
+        <div class="box" style="cursor: zoom-in">cursor: zoom-in</div>
+        <div class="box" style="cursor: zoom-out">cursor: zoom-out</div>
+        <div class="box" style="cursor: copy">cursor: copy</div>
+        <div class="box" style="cursor: move">cursor: move</div>
+        <div class="box" style="cursor: no-drop">cursor: no-drop</div>
+        <div class="box" style="cursor: cell">cursor: cell</div>
+        <div class="box" style="cursor: context-menu">cursor: context-menu</div>
+        <div class="box" style="cursor: crosshair">cursor: crosshair</div>
+        <div class="box" style="cursor: alias">cursor: alias</div>
+        <div class="box" style="cursor: not-allowed">cursor: not-allowed</div>
+        <div class="box" style="cursor: grab">cursor: grab</div>
+        <div class="box" style="cursor: grabbing">cursor: grabbing</div>
+        <div class="box" style="cursor: all-scroll">cursor: all-scroll</div>
+      </div>
+    </div>
+  </body>
+</html>
