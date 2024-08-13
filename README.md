@@ -92,3 +92,28 @@ This form allows users to register by providing their personal information.
 
 - Ensure all information provided is accurate and complete.
 
+# JSON
+
+- "" -> String -> "name": "john"
+- [] -> Array -> "name" : ["John","Doe"]
+- {} -> Object -> "name" : {"first": "John", "last": "Doe}
+- , -> Separator -> "name"
+- : -> Key-Value Pair -> "name":"John"
+
+# Truthy
+
+[Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+
+# Falsy
+
+[Falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+
+if(0){
+  console.log("Truthy")}else{console.log("falsy")}
+  
+  ""
+  "empty"
+  false
+  null
+  undefined
+  "null"
