@@ -16,14 +16,124 @@
     </p>
 
     <script>
-      // JavaScript code goes here
+      // Creation of the Array
       const emotions = ["a", "b", "c", "d", "e"];
-      console.log("🚀 ~ emotions:", emotions[emotions.length - 1]); // access the last element of Array
-      console.log("🚀 ~ emotions:", emotions[Math.floor(emotions.length / 2)]); //access the middle element of Array
 
-      const fruits = ["Apple", "Banana", "Orange", "Mango", "PineApple"]; // Creation Array of fruits
-      console.log("🚀 ~ fruits:", fruits);
-      console.log("🚀 ~ fruits:", fruits.length);
+      // Access the last element of the Array
+      console.log("Last emotion:", emotions[emotions.length - 1]);
+
+      // Access the middle element of the Array
+      console.log("Middle emotion:", emotions[Math.floor(emotions.length / 2)]);
+
+      // Creation of an Array of fruits
+      const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+      console.log("Fruits array:", fruits);
+
+      // Print the array using a for loop
+      console.log("Fruits array length:", fruits.length);
+      for (let i = 0; i < fruits.length; i++) {
+        console.log("Index:", i, "Value:", fruits[i]);
+      }
+
+      // Method 2 -> Using map function -> return new array
+      const newArray = fruits.map((fruit, index) => {
+        return `${index + 1}. ${fruit}`; // Corrected to return each fruit with its index
+      });
+      console.log("New array with map:", newArray);
+
+      // Method 3 -> Using filter function
+      const filteredArray = fruits.filter((fruit) => {
+        return fruit.includes("a"); // Example filter: only fruits containing "a"
+      });
+      console.log("Filtered array with filter:", filteredArray);
+
+      // Print even numbers using filter
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const evenNumbers = numbers.filter((number) => {
+        return number % 2 === 0;
+      });
+      console.log("Even numbers:", evenNumbers);
+
+      // Using join to create a string from emotions
+      const emotions2 = ["☹️", "😬", "😳"];
+      console.log("Joined emotions:", emotions2.join("-"));
+
+      // Concatenate more emotions to the existing array
+      const moreEmotions = ["😨"];
+      const allEmotions = emotions2.concat(moreEmotions);
+      console.log("All emotions:", allEmotions);
+
+      // Push and pop operations
+      let rupees = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log("Rupees array:", rupees);
+      rupees.push(10); // Pushing a number to the array
+      console.log("After push (10):", rupees);
+      rupees.push(12);
+      console.log("After push (12):", rupees);
+      console.log("Popped value:", rupees.pop()); // Pop last element
+      console.log("After pop:", rupees);
+
+      // Shift operation
+      console.log("Shifted value:", rupees.shift()); // Shift first element
+      console.log("After shift:", rupees);
+
+      // Sort operation
+      console.log("Sorted rupees:", rupees.sort()); // Sorting the array
+
+      // Fill operation
+      rupees.fill(10); // Filling array with 10
+      console.log("Filled rupees with 10:", rupees);
+
+      const students = new Array(75).fill("A").fill("P", 30).fill("A", 40);
+      console.log("🚀 ~ students:", students);
+
+      // Flat Method
+      const nestedArray = [1, 2, [3, 4, [5, 6]]];
+      const flattenedArray = nestedArray.flat(2); // Flattens the array up to 2 levels deep
+      console.log("Flattened array:", flattenedArray); // Output: [1, 2, 3, 4, 5, 6]
+      // Slice Method
+      const fruits2 = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+      const slicedFruits = fruits.slice(1, 4); // Slices from index 1 to 3
+      console.log("Sliced fruits:", slicedFruits); // Output: ["Banana", "Orange", "Mango"]
+
+      // ForEach Method
+      const numbers2 = [1, 2, 3, 4, 5];
+      numbers2.forEach((number, index) => {
+        console.log(`Index: ${index}, Value: ${number}`);
+      });
+
+      // Output:
+      // Index: 0, Value: 1
+      // Index: 1, Value: 2
+      // Index: 2, Value: 3
+      // Index: 3, Value: 4
+      // Index: 4, Value: 5
+
+      // find
+      const arr2 = [1, 2, 3, 4];
+
+      const foundValue = arr2.find((num) => num === 3);
+      console.log("Found value:", foundValue); // Output: 3
+
+      // IndexOf
+      const fruits3 = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+      const index = fruits3.indexOf("Mango");
+      console.log("Index of Mango:", index); // Output: 3
+      console.log(fruits3.indexOf("")); // Output:
+      // FindIndex
+      const foundIndex = arr2.findIndex((num) => num === 3);
+      console.log("Found index:", foundIndex); // Output: 2
+
+      // Some
+      const hasEvenNumber = arr2.some((num) => num % 2 === 0);
+      console.log("Has even number:", hasEvenNumber); // Output: true
+      // Every
+      const allEven = arr2.every((num) => num % 2 === 0);
+      console.log("All even:", allEven); // Output: false
+
+      // Includes
+      const includesThree = arr2.includes(3);
+      console.log("Includes 3:", includesThree); // Output: true
     </script>
   </body>
 </html>
