@@ -10,7 +10,17 @@
         color: white;
         text-align: center;
       }
-
+      button {
+        background-color: rgb(21, 114, 235);
+        padding: 15px;
+        border: 2px solid;
+        border-radius: 50% 10% / 10% 50%;
+        margin: 4px 2px;
+      }
+      button:hover {
+        background-color: red;
+        cursor: pointer;
+      }
       li {
         text-align: left;
       }
@@ -31,52 +41,133 @@
           var(--neutral-light-800) 90%
         );
       }
-      button {
-        background-color: rgb(4, 124, 244);
-        padding: 15px;
-        border: 2px solid;
-        border-radius: 50% 10% / 10% 50%;
-        margin: 4px 2px;
-      }
-      button:hover {
-        background-color: red;
-        cursor: pointer;
-      }
     </style>
   </head>
   <body style="background: linear-gradient(rgb(53, 53, 239), rgb(0, 0, 47))">
-    <div style="max-width: 550px; margin: auto; height: 900px">
+    <div
+      style="
+        max-width: 550px;
+        margin: auto;
+        height: 900px;
+        align-items: flex-start;
+      "
+    >
       <h1>Logging messages</h1>
       <p>Open the console to see the messages</p>
-      <button>Log messages</button>
-      <button>Warn message</button>
-      <button>Error Message</button>
-      <button>Info Message</button>
+      <button id="logButton">Log messages</button>
+      <button id="warnButton">Warn message</button>
+      <button id="errorButton">Error Message</button>
+      <button id="infoButton">Info Message</button>
       <br />
-      <button>Clear Console</button>
-      <button>Assert</button>
-      <button>Table</button>
-      <button>Table</button>
-      <button>Group</button>
-      <button>Custom Style</button>
+      <button id="clearButton">Clear Console</button>
+      <button id="assertButton">Assert</button>
+      <button id="tableButton">Table</button>
+      <button id="groupButton">Group</button>
+      <button id="styleButton">Custom Style</button>
       <br />
-      <button>Cause 404 Error</button>
-      <button>Cause Error</button>
-      <button>Cause Victation</button>
+      <button id="cause404Button">Cause 404 Error</button>
+      <button id="causeErrorButton">Cause Error</button>
+      <button id="causeViolationButton">Cause Violation</button>
       <p style="text-align: left"><b>To open the console:</b></p>
       <ul>
         <li><b>Right click on the page and select "Inspect"</b></li>
-        <li><b>Press F12 or Ctrl + Shift + l</b></li>
-        <li><b>Press F12 or Cmd + Option + l on Mac</b></li>
+        <li><b>Press F12 or Ctrl + Shift + I</b></li>
+        <li><b>Press F12 or Cmd + Option + I on Mac</b></li>
       </ul>
     </div>
 
     <script>
-      console.log("%c This is the custom image", "color:red;background:yellow");
-      console.warn(
-        "%c This is a warning message",
-        "color:orange;background:yellow"
+      // Log messages
+      const logButton = document.getElementById("logButton");
+      logButton.addEventListener("click", () => {
+        console.log("This is a log message");
+      });
+
+      // Warn message
+      const warnButton = document.getElementById("warnButton");
+      warnButton.addEventListener("click", () => {
+        console.warn("This is a warning message");
+      });
+
+      // Error message
+      const errorButton = document.getElementById("errorButton");
+      errorButton.addEventListener("click", () => {
+        console.error("This is an error message");
+      });
+
+      // Info message
+      const infoButton = document.getElementById("infoButton");
+      infoButton.addEventListener("click", () => {
+        console.info("This is an info message");
+      });
+
+      // Clear console
+      const clearButton = document.getElementById("clearButton");
+      clearButton.addEventListener("click", () => {
+        console.clear();
+      });
+
+      // Assert
+      const assertButton = document.getElementById("assertButton");
+      assertButton.addEventListener("click", () => {
+        console.assert(false, "This is an assert message");
+      });
+
+      // Table
+      const tableButton = document.getElementById("tableButton");
+      tableButton.addEventListener("click", () => {
+        const group = [
+          { groupName: "Group 1", groupStatus: "active" },
+          { groupName: "Group 2", groupStatus: "removed" },
+        ];
+        console.table(group);
+      });
+
+      // Group
+      const groupButton = document.getElementById("groupButton");
+      groupButton.addEventListener("click", () => {
+        console.group("Group Start");
+        console.log("Inside the group");
+        console.groupEnd();
+      });
+
+      // Custom style
+      const styleButton = document.getElementById("styleButton");
+      styleButton.addEventListener("click", () => {
+        console.log(
+          "%c This is a styled message",
+          "color: yellow; font-size: 20px;"
+        );
+      });
+
+      // Cause 404 error
+      const cause404Button = document.getElementById("cause404Button");
+      cause404Button.addEventListener("click", () => {
+        fetch("non-existing-url")
+          .then((response) => response.json())
+          .catch((error) =>
+            console.error("404 Error: Resource not found", error)
+          );
+      });
+
+      // Cause error
+      const causeErrorButton = document.getElementById("causeErrorButton");
+      causeErrorButton.addEventListener("click", () => {
+        try {
+          throw new Error("This is a manually triggered error");
+        } catch (error) {
+          console.error(error);
+        }
+      });
+
+      // Cause violation
+      const causeViolationButton = document.getElementById(
+        "causeViolationButton"
       );
+      causeViolationButton.addEventListener("click", () => {
+        document.body.style.overflow = "hidden";
+        console.log("This is a scroll violation");
+      });
     </script>
   </body>
 </html>
