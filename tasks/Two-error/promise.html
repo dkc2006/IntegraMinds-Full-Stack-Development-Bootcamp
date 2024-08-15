@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Error & Reference Error</title>
+  </head>
+  <body>
+    <h1>Example of Type Error & Reference Error</h1>
+    <script>
+      // Type Error Example
+      async function fetchData() {
+        try {
+          // The URL contains a typo which will cause a TypeError when fetch fails to parse it correctly
+          const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+          console.log("🚀 ~ fetchData ~ res:", res);
+          const data = await res.json();
+          console.log("🚀 ~ fetchData ~ data:", data);
+        } catch (e) {
+          // This will catch and log the TypeError
+          console.log("TypeError caught:", e);
+        }
+      }
+      fetchData();
+
+      // Reference Error Example
+      try {
+        // 'error' should be 'Error' (JavaScript is case-sensitive)
+        throw new Error("Kuldeep Singh");
+      } catch (e) {
+        // This will log the name of the error (ReferenceError)
+        console.log("ReferenceError caught:", e.name);
+        console.log("Error message:", e.message);
+      }
+    </script>
+  </body>
+</html>

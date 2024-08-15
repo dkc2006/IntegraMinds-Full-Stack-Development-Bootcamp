@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Working with JSON - Array of objects [sample data from medium.com]
+    </title>
+    <style>
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .card h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+      .card p {
+        font-size: 1rem;
+        margin: 10 0;
+      }
+      .card .author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .card .author img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      .card .author p {
+        font-size: 1rem;
+      }
+      .card .stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .card .stats p {
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="posts"></div>
+    </main>
+    <script>
+      const cards = [
+        {
+          _id: "card1",
+          title:
+            "How To Update Your Status During Standup Like a Senior Engineer",
+          description:
+            "A status update is where you can showcase how well you manage ambiguity and is an important way to build trust with your team",
+          authorName: "Edward Huang",
+          cardImageUrl:
+            "https://miro.medium.com/v2/resize:fit:828/format:webp/0*3Xdd_WEaRxryzfLC",
+          authorImageUrl:
+            "https://miro.medium.com/v2/resize:fill:176:176/1*wfUDTiKcoy2gOH98Eq2kIQ.jpeg",
+          date: "Jun 22",
+          likes: 2800,
+          Comments: "125",
+          status: "active",
+        },
+        {
+          _id: "card2",
+          title:
+            "28 JavaScript One-Liners every Senior Developer Needs to Know",
+          description:
+            "Learn how to implement complex logic with beautifully short and efficient next-level JavaScript syntax.",
+          authorName: "Mate Marschalko",
+          cardImageUrl:
+            "https://miro.medium.com/v2/resize:fit:828/format:webp/1*SvL6TGfFaPmEOtw1dzPDFg.jpeg",
+          authorImageUrl:
+            "https://miro.medium.com/v2/resize:fill:110:110/1*pdvQ_QYAVavif1MNzvwARQ.jpeg",
+          date: "Mar 12",
+          likes: 1300,
+          Comments: "11",
+          status: "active",
+        },
+        {
+          _id: "card3",
+          title: "My Experience With an Arrogant Junior Programmer",
+          description: "That I won’t forget",
+          authorName: "Josef Cruz",
+          cardImageUrl:
+            "https://miro.medium.com/v2/resize:fit:828/format:webp/0*oY_ucPmMlywwHFow",
+          authorImageUrl:
+            "https://miro.medium.com/v2/resize:fill:110:110/1*RvB7OCsPIBQwZpVMW3UEeg.jpeg",
+          date: "Dec 19",
+          likes: 6600,
+          Comments: "201",
+          status: "active",
+        },
+      ];
+
+      console.log(cards);
+      console.log(cards.length);
+
+      const postTag = document.querySelector(".posts");
+      cards.map((card) => {
+        const postElement = document.createElement("div");
+        postElement.className = "card";
+        postElement.setAttribute("_id", card._id);
+        postElement.innerHTML = `
+          <img src ="${card.cardImageUrl}" alt="${card.title}"/>
+          <h2>${card.title}</h2>
+          <p>${card.description}</p>
+          <div class="author">
+            <img src="${card.authorImageUrl}" alt="${card.authorName}"/>
+            <p>${card.authorName}</p>
+          </div>
+          <div class="stats">
+            <p>${card.date}</p>
+            <p>${card.likes} likes</p>
+            <p>${card.Comments} comments</p>
+          </div>`;
+        postTag.appendChild(postElement);
+      });
+    </script>
+  </body>
+</html>

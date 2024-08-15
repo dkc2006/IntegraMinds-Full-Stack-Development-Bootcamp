@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const promise = new Promise((resolve, reject) => {
+        const isSuccessful = true;
+        if (isSuccessful) {
+          resolve("Promise resolved successfully");
+        } else {
+          reject("Promise rejected");
+        }
+      });
+
+      promise
+        .then((message) => {
+          console.log(message);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>

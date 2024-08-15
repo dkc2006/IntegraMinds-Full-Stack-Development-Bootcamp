@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Mouse Events using JavaScript</title>
+    <style>
+      #mouse-events {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px;
+      }
+      p {
+        margin: 5px 0;
+      }
+      #mouse-position {
+        color: blue;
+      }
+      #mouse-click {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Working with Mouse Event Listener</h1>
+    <div id="mouse-events">
+      <p id="mouse-position">Mouse Position:</p>
+      <p id="mouse-click">Mouse Click:</p>
+      <p id="mouse-double-click">Mouse Double Click:</p>
+      <p id="mouse-down">Mouse Down:</p>
+      <p id="mouse-up">Mouse Up:</p>
+      <p id="mouse-over">Mouse Over:</p>
+      <p id="mouse-out">Mouse Out:</p>
+      <p id="mouse-move">Mouse Move:</p>
+      <p id="mouse-wheel">Mouse Wheel:</p>
+    </div>
+
+    <script>
+      const mouseEvents = document.getElementById("mouse-events");
+      const mousePosition = document.getElementById("mouse-position");
+      const mouseClick = document.getElementById("mouse-click");
+      const mouseDoubleClick = document.getElementById("mouse-double-click");
+      const mouseDown = document.getElementById("mouse-down");
+      const mouseUp = document.getElementById("mouse-up");
+      const mouseOver = document.getElementById("mouse-over");
+      const mouseOut = document.getElementById("mouse-out");
+      const mouseMove = document.getElementById("mouse-move");
+      const mouseWheel = document.getElementById("mouse-wheel");
+
+      document.addEventListener("mousemove", (event) => {
+        mousePosition.textContent = `Mouse Position: (${event.clientX}, ${event.clientY})`;
+        mouseMove.textContent = `Mouse Move: (${event.clientX}, ${event.clientY})`;
+      });
+
+      document.addEventListener("click", () => {
+        mouseClick.textContent = "Mouse Click";
+      });
+
+      document.addEventListener("dblclick", () => {
+        mouseDoubleClick.textContent = "Mouse Double Click";
+      });
+
+      document.addEventListener("mousedown", () => {
+        mouseDown.textContent = "Mouse Down";
+      });
+
+      document.addEventListener("mouseup", () => {
+        mouseUp.textContent = "Mouse Up";
+      });
+
+      document.addEventListener("mouseover", () => {
+        mouseOver.textContent = "Mouse Over";
+      });
+
+      document.addEventListener("mouseout", () => {
+        mouseOut.textContent = "Mouse Out";
+      });
+
+      document.addEventListener("wheel", (event) => {
+        mouseWheel.textContent = `Mouse Wheel: (${event.deltaX}, ${event.deltaY})`;
+      });
+    </script>
+  </body>
+</html>
