@@ -27,7 +27,7 @@
 27. Remove Element
 28. setAttribute
 29. Toggle 
-30. Updating the color using javascript 
+30. Updating the color using javascript ------------------------------------------------
 31. Working with Mouse Event Listener --------------------------------
 32. Try this api --------------------------------
 Main URL: https://jsonplaceholder.typicode.com/ --------------------------------

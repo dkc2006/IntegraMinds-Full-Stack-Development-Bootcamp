@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>appendChild</title>
+  </head>
+  <body>
+    <h1>Appending Child Elements</h1>
+    <div id="parentElement">
+      <p>Existing Content</p>
+    </div>
+    <script>
+      // Create a new elements
+      const newElement = document.createElement("p");
+      newElement.textContent = "Newly Append Content";
+
+      // Find the parent element
+      const parentElement = document.getElementById("parentElement");
+
+      // Append the new element to the parent element
+      parentElement.appendChild(newElement);
+    </script>
+  </body>
+</html>
