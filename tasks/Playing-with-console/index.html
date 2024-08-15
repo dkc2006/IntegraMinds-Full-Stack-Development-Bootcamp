@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing with Console</title>
+  </head>
+  <body>
+    <h1>Playing with Console in JavaScript</h1>
+    <script>
+      // Log a message to the console
+      console.log("Hello, World!");
+      console.error("This is an error!"); // Outputs: This is an error! (typically in red)
+      console.warn("This is a warning!"); // Outputs: This is a warning! (typically in yellow)
+      console.info("This is an info message."); // Outputs: This is an info message.
+      console.clear(); // Clears the console output
+      const users = [
+        { name: "Alice", age: 25 },
+        { name: "Bob", age: 30 },
+        { name: "Charlie", age: 35 },
+      ];
+      console.table(users);
+      console.time("Timer");
+      for (let i = 0; i < 1000000; i++) {} // Some operation
+      console.timeEnd("Timer"); // Outputs the time it took to execute the loop
+
+      let x = 5;
+      console.assert(x > 10, "x is not greater than 10"); // Outputs: x is not greater than 10
+    </script>
+  </body>
+</html>
