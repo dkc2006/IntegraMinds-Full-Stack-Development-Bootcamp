@@ -13,11 +13,11 @@
 13. Grid Example
 14. Flex Example
 15. Google Home Example --------------------------------
-16. Resume JSON 
-17. Working with Truthy & Falsy
-18. Playing with Variable
-19. Playing with console
-20. Working with Array [JS]
+16. Resume JSON --------------------------------
+17. Working with Truthy & Falsy 
+18. Playing with Variable 
+19. Playing with console 
+20. Working with Array [JS] 
 21. Multi Dimensional Array
 22. Medium.com Example
 23. Two Errors
