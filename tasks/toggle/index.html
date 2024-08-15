@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>add,remove,toggle</title>
+  </head>
+  <body>
+    <div id="elementWithClasses" class="box">Content</div>
+    <script>
+      // Find the element to access the classlist using the querySelector
+      const element = document.querySelector("#elementWithClasses");
+
+      // Add a class to the element
+      element.classList.add("highlight");
+
+      // Remove a class from the element
+      element.classList.remove("box");
+
+      // Toggle a class on the element
+      element.classList.toggle("active");
+
+      // checking for a class
+
+      const hasHighlightClass = element.classList.contains("highlight");
+      console.log("Has highlight class: ", hasHighlightClass); // true
+
+      const hasBoxClass = element.classList.contains("box");
+      console.log("Has box class: ", hasBoxClass); // false
+    </script>
+  </body>
+</html>
