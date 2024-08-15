@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>remove element</title>
+  </head>
+  <body>
+    <div id="parentElement">
+      <p>content to Keep</p>
+      <p>Content to Remove</p>
+      <p>More Content to Keep</p>
+    </div>
+    <script>
+      // Find the element to be remove using the querySelector
+      const elementToRemove = document.querySelector(
+        "#parentElement p:nth-child(2)"
+      );
+
+      // Remove the element using the remove method
+      elementToRemove.remove();
+
+      // Alternative method using the parent element and child index
+      // const parentElement = document.getElementById("parentElement");
+      // parentElement.removeChild(parentElement.children[1]);
+    </script>
+  </body>
+</html>

@@ -22,9 +22,9 @@
 22. Medium.com Example ---------------------------------------------------------------- 
 23. Two Errors --------------------------------
 24. Async & Await - JSON Placeholder --------------------------------
-25. querySelector 
+25. querySelector ----------------------------------------------------------------
 26. appendChild ---------------------------------------
-27. Remove Element
+27. Remove Element ------------------------------------------
 28. setAttribute
 29. Toggle 
 30. Updating the color using javascript ------------------------------------------------
