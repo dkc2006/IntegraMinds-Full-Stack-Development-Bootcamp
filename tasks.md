@@ -19,16 +19,16 @@
 19. Playing with console --------------------------------
 20. Working with Array [JS] --------------------------------------------------------
 21. Multi Dimensional Array --------------------------------
-22. Medium.com Example
-23. Two Errors
-24. Async & Await - JSON Placeholder
+22. Medium.com Example ---------------------------------------------------------------- 
+23. Two Errors --------------------------------
+24. Async & Await - JSON Placeholder --------------------------------
 25. querySelector
 26. appendChild
 27. Remove Element
 28. setAttribute
 29. Toggle
-30. Updating the color using javascript
-31. Working with Mouse Event Listener
+30. Updating the color using javascript 
+31. Working with Mouse Event Listener 
 32. Try this api
 Main URL: https://jsonplaceholder.typicode.com/ 
     - JSON Placeholder - 1 (users) - https://jsonplaceholder.typicode.com/users
