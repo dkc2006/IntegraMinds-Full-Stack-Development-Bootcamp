@@ -23,7 +23,7 @@
 23. Two Errors --------------------------------
 24. Async & Await - JSON Placeholder --------------------------------
 25. querySelector 
-26. appendChild
+26. appendChild ---------------------------------------
 27. Remove Element
 28. setAttribute
 29. Toggle 

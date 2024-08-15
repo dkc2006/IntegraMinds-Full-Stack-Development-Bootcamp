@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelector</title>
+  </head>
+  <body>
+    <h1>querySelector</h1>
+    <div id="parentElement">
+      <p>Existing content</p>
+    </div>
+    <script>
+      // Select the parent element by its id
+      const parentElement = document.querySelector("#parentElement");
+
+      // Modify the innerHTML to add or replace content
+      parentElement.innerHTML += `<p>New content</p>`;
+      // or
+      /* parentElement.innerHTML = `<p>New content</p>`;*/
+    </script>
+  </body>
+</html>
