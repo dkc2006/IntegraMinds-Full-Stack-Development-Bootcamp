@@ -14,7 +14,7 @@
 14. Flex Example
 15. Google Home Example --------------------------------
 16. Resume JSON --------------------------------
-17. Working with Truthy & Falsy 
+17. Working with Truthy & Falsy --------------------------------------------------------
 18. Playing with Variable 
 19. Playing with console 
 20. Working with Array [JS] 

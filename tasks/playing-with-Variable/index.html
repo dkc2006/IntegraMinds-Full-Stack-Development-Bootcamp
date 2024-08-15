@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing with Variables</title>
+  </head>
+  <body>
+    <h1>Playing with Variables in JavaScript</h1>
+
+    <script>
+      // Declaring variables
+      var name = "Alice"; // String
+      let age = 25; // Number
+      const isStudent = true; // Boolean
+
+      // Logging the variables
+      console.log(name); // Outputs: Alice
+      console.log(age); // Outputs: 25
+      console.log(isStudent); // Outputs: true
+
+      // Reassigning a variable
+      name = "Bob";
+      age = age + 1; // Incrementing the age
+
+      console.log(name); // Outputs: Bob
+      console.log(age); // Outputs: 26
+
+      // Variable manipulation
+      let greeting = "Hello, " + name + "!";
+      console.log(greeting); // Outputs: Hello, Bob!
+
+      // Using variables in conditions
+      if (age > 20) {
+        console.log(name + " is older than 20."); // Outputs: Bob is older than 20.
+      } else {
+        console.log(name + " is 20 or younger.");
+      }
+
+      // Playing with undefined and null
+      let address;
+      console.log(address); // Outputs: undefined
+
+      address = null;
+      console.log(address); // Outputs: null
+
+      // Demonstrating let and const
+      let score = 100;
+      score = 150; // Reassigning let is allowed
+      console.log(score); // Outputs: 150
+
+      const maxScore = 200;
+      // maxScore = 250;          // This would throw an error because const cannot be reassigned
+
+      console.log(maxScore); // Outputs: 200
+    </script>
+  </body>
+</html>
