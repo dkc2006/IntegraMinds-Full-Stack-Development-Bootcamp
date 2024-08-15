@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setAttribute Example</title>
+  </head>
+  <body>
+    <img
+      id="imageElement"
+      src="/Day-3/CSS/assets/img2.png"
+      alt="Example Image"
+    />
+    <script>
+      // Find the element to modify using querySelector
+      const imageElement = document.querySelector("#imageElement");
+
+      // Set the alt attribute using the setAttribute method
+      imageElement.setAttribute("alt", "New Image Description");
+    </script>
+  </body>
+</html>
