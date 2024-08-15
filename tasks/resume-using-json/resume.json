@@ -1,5 +1,5 @@
 {
-  "name": "Sagar Rajput",
+  "name": "Deepanshu Khandelwal",
   "age": 18,
   "dob": "18 / 10 / 2002",
   "address": [
@@ -33,8 +33,7 @@
       "company": "Morbid Technology",
       "position": "Software Developer",
       "duration": "2 months",
-      "description":
-        "Worked on various projects related to web development."
+      "description": "Worked on various projects related to web development."
     }
   ]
 }

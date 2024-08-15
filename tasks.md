@@ -5,14 +5,14 @@
 5. Register form --------------------------------
 6. Whatsapp Message 
 7. Link playing with css --------------------------------
-8. Dark/Light
-9.  Github committed
-10. Example 1 [table]
-11. Color code
-12. Log buttons
+8. Dark/Light --------------------------------
+9.  Github committed --------------------------------
+10. Example 1 [table] --------------------------------
+11. Color code --------------------------------
+12. Log buttons --------------------------------
 13. Grid Example
 14. Flex Example
-15. Google Home Example
+15. Google Home Example --------------------------------
 16. Resume JSON 
 17. Working with Truthy & Falsy
 18. Playing with Variable
