@@ -17,8 +17,8 @@
 17. Working with Truthy & Falsy --------------------------------------------------------
 18. Playing with Variable --------------------------------------------------------
 19. Playing with console --------------------------------
-20. Working with Array [JS] 
-21. Multi Dimensional Array
+20. Working with Array [JS] --------------------------------------------------------
+21. Multi Dimensional Array --------------------------------
 22. Medium.com Example
 23. Two Errors
 24. Async & Await - JSON Placeholder
