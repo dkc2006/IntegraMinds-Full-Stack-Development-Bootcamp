@@ -146,4 +146,18 @@ Error 4
 
 Unterminated JSX contents. - When the JSX is not properly closed
 
-Error 5
+Error 5 :
+
+SyntaxError: The requested module '/src/XXXXXXX' does not provide an export **named** **'default'** (at XXXXXX)
+
+SyntaxError: The requested module '/src/App.jsx?t=1723791975853' does not provide an export **named** **'XXXXXX'**
+
+case 1:
+
+1. Export default with any name and default import any name - > No error
+2. Export default with any name and named import any name -> error
+3. In a file, only one default export is possible,same only one default import is possible
+4. In a file multiple named exports are possible,same multiple name import are possible
+5. named export two ways :
+   a. export const XXXXXX = () =>{}
+   b. const XXXXX = () => {}; export {XXXXXX}
