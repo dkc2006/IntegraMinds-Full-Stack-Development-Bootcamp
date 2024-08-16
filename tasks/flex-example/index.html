@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+      }
+
+      .square {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+      }
+
+      .first {
+        background-color: magenta;
+        top: 0;
+        left: 0;
+      }
+
+      .second {
+        background-color: cyan;
+        top: 50px;
+        left: 50px;
+      }
+
+      .third {
+        background-color: green;
+        top: 100px;
+        left: 0;
+      }
+    </style>
+    <title>Overlapping Squares</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="square first">First</div>
+      <div class="square second">Second</div>
+      <div class="square third">Third</div>
+    </div>
+  </body>
+</html>
