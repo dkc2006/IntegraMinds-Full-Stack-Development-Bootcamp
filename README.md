@@ -161,3 +161,10 @@ case 1:
 5. named export two ways :
    a. export const XXXXXX = () =>{}
    b. const XXXXX = () => {}; export {XXXXXX}
+
+6. Functional component Vs Normal Function
+   | Functional Component | Normal Function |
+   |--------------------- | ----------------|
+   | | |
+   | | |
+   | | |

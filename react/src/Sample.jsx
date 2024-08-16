@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
 
- function App() {
-  const [count, setCount] = useState(0)
+export function Sample() {
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,7 +29,110 @@ import './App.css'
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+// const App = () => {
+//   const profile = {
+//     name: 'John Doe',
+//     age: 30,
+//     address: {
+//       street: '123 Main St',
+//       city: 'New York',
+//       state: 'NY',
+//       zip: '10001',
+//     },
+//     hobbies: ['reading', 'painting', 'coding', 'cooking'],
+//   };
+
+//   return (
+//     <div className="App">
+//       <header className="App-header"></header>
+//       <div>
+//         <h1>{profile.name}</h1>
+//         <p>
+//           Address: {profile.address.street}, {profile.address.city}, {profile.address.state},{' '}
+//           {profile.address.zip}
+//         </p>
+//         <ul>
+//           {profile.hobbies.map((hobby, index) => {
+//             console.log("🚀 ~ {profile.hobbies.map ~ hobby:", hobby);
+//             <li key={index}>{hobby}</li>
+//         })}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+
+
+
+// export default App;
+
+
+const App = () => {
+  const cards = [
+    {
+      _id: "card1",
+      title: "How To Update Your Status During Standup Like a Senior Engineer",
+      description:
+        "A status update is where you can showcase how well you manage ambiguity and is an important way to build trust with your team",
+      authorName: "Edward Huang",
+      cardImageUrl:
+        "https://miro.medium.com/v2/resize:fit:828/format:webp/0*3Xdd_WEaRxryzfLC",
+      authorImageUrl:
+        "https://miro.medium.com/v2/resize:fill:176:176/1*wfUDTiKcoy2gOH98Eq2kIQ.jpeg",
+      date: "Jun 22",
+      likes: 2800,
+      Comments: "125",
+      status: "active",
+    },
+    {
+      _id: "card2",
+      title: "28 JavaScript One-Liners every Senior Developer Needs to Know",
+      description:
+        "Learn how to implement complex logic with beautifully short and efficient next-level JavaScript syntax.",
+      authorName: "Mate Marschalko",
+      cardImageUrl:
+        "https://miro.medium.com/v2/resize:fit:828/format:webp/1*SvL6TGfFaPmEOtw1dzPDFg.jpeg",
+      authorImageUrl:
+        "https://miro.medium.com/v2/resize:fill:110:110/1*pdvQ_QYAVavif1MNzvwARQ.jpeg",
+      date: "Mar 12",
+      likes: 1300,
+      Comments: "11",
+      status: "active",
+    },
+    {
+      _id: "card3",
+      title: "My Experience With an Arrogant Junior Programmer",
+      description: "That I won’t forget",
+      authorName: "Josef Cruz",
+      cardImageUrl:
+        "https://miro.medium.com/v2/resize:fit:828/format:webp/0*oY_ucPmMlywwHFow",
+      authorImageUrl:
+        "https://miro.medium.com/v2/resize:fill:110:110/1*RvB7OCsPIBQwZpVMW3UEeg.jpeg",
+      date: "Dec 19",
+      likes: 6600,
+      Comments: "201",
+      status: "active",
+    },
+  ];
+
+  return (
+    <div className="App">
+      <header className="App-header"></header>
+      <div>
+        {cards.map((card) => (
+          <div key={card._id} className="card">
+            <img src={card.cardImageUrl} alt={card.title} />
+            <h2>{card.title}</h2>
+            
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
