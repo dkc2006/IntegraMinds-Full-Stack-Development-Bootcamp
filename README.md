@@ -1,20 +1,24 @@
 # HTML
 
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### Heading 4
+
 ##### Heading 5
+
 ###### Heading 6
 
 **Bold Text**
-*Italic Text*
-***Bold and italic Text***
+_Italic Text_
+**_Bold and italic Text_**
 
 > Blockquote
 > Blockquote
 > Blockquote
-> 
 
 - List Item 1
 - List Item 2
@@ -25,25 +29,27 @@
 
 1. List Item 1
 2. List Item 2
-    1. Sub List Item 1
-    2. Sub List Item 2
+   1. Sub List Item 1
+   2. Sub List Item 2
 3. List Item 3
 4. List Item 4
 
 | Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | Row 1    | Row 1    | Row 1    |
 | Row 2    | Row 2    | Row 2    |
 | Row 3    | Row 3    | Row 3    |
 
 ## Tips
+
 - Element
 - Tag
 
-- Whenever Opening Tag/symbol,Immediately close it and come 
-inside it to write the content.
+- Whenever Opening Tag/symbol,Immediately close it and come
+  inside it to write the content.
 
 Example 1
+
 # CSE
 
 - Section A
@@ -83,7 +89,7 @@ This form allows users to register by providing their personal information.
 
 ## Usage
 
-1. Fill in all required fields marked with (*).
+1. Fill in all required fields marked with (\*).
 2. Select appropriate options from dropdowns where applicable.
 3. Upload a profile picture as specified.
 4. Click the "Submit" button to complete the registration process.
@@ -109,24 +115,35 @@ This form allows users to register by providing their personal information.
 [Falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 if(0){
-  console.log("Truthy")}else{console.log("falsy")}
-  
-  ""
-  "empty"
-  false
-  null
-  undefined
-  "null"
+console.log("Truthy")}else{console.log("falsy")}
 
+""
+"empty"
+false
+null
+undefined
+"null"
 
-  # Array
+# Array
 
+# **React + Vite**
 
-# **React**
+Error 1
 
+Failed to resolve import "./XXXXXXX.jsx" from "src/XXX.jsx". Does the file exist?
 
+Error 2
 
+Unterminated string constant.
 
+Error 3
 
+Unexpected token (Removed the package name in the import part)
 
-  
+Unexpected token, expected (When the import not properly closed)
+
+Error 4
+
+Unterminated JSX contents. - When the JSX is not properly closed
+
+Error 5
