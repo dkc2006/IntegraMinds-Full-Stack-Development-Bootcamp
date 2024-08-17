@@ -164,7 +164,7 @@ case 1:
 
 6. Functional component Vs Normal Function
    | Functional Component | Normal Function |
-   |--------------------- | ----------------|
-   | | |
-   | | |
-   | | |
+   |---------------------------| ----------------|
+   | Always return JSX | Return anything |
+   | Pascal Case | Camel Case |
+   | 0 or 1 argument ie. props | 0 or more |
