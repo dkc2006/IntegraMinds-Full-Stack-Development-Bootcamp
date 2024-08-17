@@ -168,3 +168,6 @@ case 1:
    | Always return JSX | Return anything |
    | Pascal Case | Camel Case |
    | 0 or 1 argument ie. props | 0 or more |
+
+7. Functional Components => Normal Function or Arrow Function
+8. Functional Components Vs Class Component
