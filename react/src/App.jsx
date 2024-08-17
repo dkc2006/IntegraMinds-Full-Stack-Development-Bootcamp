@@ -32,46 +32,18 @@ export function Sample() {
   );
 }
 
-// const App = () => {
-//   const profile = {
-//     name: 'John Doe',
-//     age: 30,
-//     address: {
-//       street: '123 Main St',
-//       city: 'New York',
-//       state: 'NY',
-//       zip: '10001',
-//     },
-//     hobbies: ['reading', 'painting', 'coding', 'cooking'],
-//   };
+const App = (props) => {
+  const profile = {
+    name: 'John Doe',
+    age: 30,
+    address: {
+      city: 'New York',
+      state: 'NY',
+      zip: '10001',
+    },
+    hobbies: ['reading', 'painting', 'coding', 'cooking'],
+  };
 
-//   return (
-//     <div className="App">
-//       <header className="App-header"></header>
-//       <div>
-//         <h1>{profile.name}</h1>
-//         <p>
-//           Address: {profile.address.street}, {profile.address.city}, {profile.address.state},{' '}
-//           {profile.address.zip}
-//         </p>
-//         <ul>
-//           {profile.hobbies.map((hobby, index) => {
-//             console.log("🚀 ~ {profile.hobbies.map ~ hobby:", hobby);
-//             <li key={index}>{hobby}</li>
-//         })}
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// };
-
-
-
-
-// export default App;
-
-
-const App = () => {
   const cards = [
     {
       _id: "card1",
@@ -121,15 +93,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header"></header>
-      <div>
-        {cards.map((card) => (
-          <div key={card._id} className="card">
-            <img src={card.cardImageUrl} alt={card.title} />
-            <h2>{card.title}</h2>
-            
-          </div>
-        ))}
+      <header className="App-header">Profile</header>
+      <div className='posts'>
+        {cards.map((card, idx) => {
+          console.log("🚀 ~ App ~ card:", card);
+          return (
+            <div key={idx} className="card">
+              <img src={card.cardImageUrl} alt="card" />
+              <h2>{card.title}</h2>
+              <p>{card.description}</p>
+              <span>By: {card.authorName}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
