@@ -1,5 +1,13 @@
 # HTML
 
+![alt text](image.png)
+
+- HTML (HyperText Markup Language) is the standard language used to create web pages. It provides the basic structure of a webpage, which is then enhanced and modified by other technologies like CSS (Cascading Style Sheets) and JavaScript. HTML is composed of a series of elements, represented by tags, that tell the web browser how to display the content.
+
+# Headings
+
+![alt text](image-1.png)
+
 # Heading 1
 
 ## Heading 2
@@ -124,7 +132,47 @@ null
 undefined
 "null"
 
+# CSS
+
+![alt text](image-2.png)
+
+- CSS (Cascading Style Sheets) is a stylesheet language used to control the presentation of HTML documents. It allows you to separate content from design, enabling you to style web pages with colors, fonts, layouts, and more.
+
+# Selectors
+
+![alt text](image-3.png)
+
+# Javascript
+
+![alt text](image-4.png)
+
+- JavaScript is is a versatile, high-level programming language primarily used to create dynamic and interactive content on web pages. It is an essential part of modern web development, allowing developers to manipulate HTML and CSS, handle events, and perform complex operations.
+
+- JavaScript code is typically embedded within HTML documents or included as external files. It is executed in the browser, enabling interaction with the Document Object Model (DOM).
+
+![alt text](js.png)
+
+# Data types
+
+![alt text](variables.png)
+
+# Naming conventions
+
+![alt text](NC.png)
+
+## camel Case
+
+![alt text](camelCase.png)
+
+## Pascal Case
+
+![alt text](PascalCase.png)
+
 # Array
+
+![alt text](Array.png)
+
+![alt text](Array2.png)
 
 # **React + Vite**
 
