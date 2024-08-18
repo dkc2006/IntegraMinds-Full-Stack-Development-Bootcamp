@@ -176,25 +176,25 @@ undefined
 
 # **React + Vite**
 
-Error 1
+- Error 1
 
 Failed to resolve import "./XXXXXXX.jsx" from "src/XXX.jsx". Does the file exist?
 
-Error 2
+- Error 2
 
 Unterminated string constant.
 
-Error 3
+- Error 3
 
 Unexpected token (Removed the package name in the import part)
 
 Unexpected token, expected (When the import not properly closed)
 
-Error 4
+- Error 4
 
 Unterminated JSX contents. - When the JSX is not properly closed
 
-Error 5 :
+- Error 5 :
 
 SyntaxError: The requested module '/src/XXXXXXX' does not provide an export **named** **'default'** (at XXXXXX)
 
