@@ -3,10 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>React and JavaScript Example</title>
   </head>
   <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
     <script>
+      // Rendering a React element inside the #root div
+      const message = React.createElement("h1", {}, "Hello from React!");
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(message);
+
+      /*const message = document.createElement("h2");
+      message.innerHTML = "Hello JavaScript!";
+      const root = document.getElementById("root");
+      root.appendChild(message);*/
+
+      // JavaScript Promise example
       /* const promise = new Promise((resolve, reject) => {
         const isSuccessful = true;
         if (isSuccessful) {
@@ -22,17 +44,24 @@
         })
         .catch((error) => {
           console.error(error);
-        });*/
+        });
 
-      // Arrow function
-      /* const App = (props) => {
+      // Arrow function React component
+      const App = (props) => {
         console.log("🚀 ~ App ~ props:", props);
-        return (
-          <div class="App">
-            <header className="App-header"></header>
-          </div>
+        return React.createElement(
+          "div",
+          { className: "App" },
+          React.createElement(
+            "header",
+            { className: "App-header" },
+            "Welcome to the App"
+          )
         );
-      };*/
+      };
+
+      // Render the App component in the root div
+      root.render(React.createElement(App, { name: "React App" }));*/
     </script>
   </body>
 </html>

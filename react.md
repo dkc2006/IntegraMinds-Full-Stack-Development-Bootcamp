@@ -1,1 +1,2 @@
-npm create vite@latest r4 -- --template react
+- npm create vite@latest r4 -- --template react
+-
