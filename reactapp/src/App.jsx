@@ -3,7 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+
+// Normal Function Vs Functional Components
+
+const App = () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -32,4 +35,18 @@ function App() {
   )
 }
 
-export default App
+// Normal Function
+
+export function sampleFunction() {
+  console.log("Hello world");
+}
+
+//Arrow function
+
+// const sampleFunction = () =>{
+//   console.log("Hello world");
+// }
+
+
+// export  {sampleFunction};
+export default App;
