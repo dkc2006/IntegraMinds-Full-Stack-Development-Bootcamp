@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Background image directly in the head for simplicity -->
+    <style>
+      body {
+        background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAPDw0NDxAPDQ8NDg0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITEhJykrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKIBNwMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAQIDBAUGB//EADkQAAIBAgMFBQYEBgMBAAAAAAABAgMREiExBEFRYXEiMoGh0QUTQnKRsVJiwfBDgpLC4fEjM1MG/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AP2kGEZmsZXASjcwqUjpAHnypmTiejOnc550gOVE2NJQKWAgNXLCwGE6Rm4nWVlTTA5kbU6hEqbRSwHSszSFS2pyxlY1jO4GsqSfai7MvT2j4Zq3PcZLkXxKWUl4gU2nYFLtQyZ506bTs8nxPUipRzi8S4F24VMpKz5geVGXHJ8dxvCe5/4ZpW2FrOOa4HOk1l5MDpcU+q0e9epj7txbcbK/ei/+up6MmEv9M1jK+T8wOWNOzcqX89GWvhxIjDP3lJ4ZrvRe/k1vOuVJPNbtM7NdGUnC7vK+JaTirT8VvAmnNVHeNqdX4oPuzX6nPKg4yc6aaaznSvmnxibShfOWdtKkN3VbjVTeWPtJd2pDvx9QKRw1YrdJO6ss4y4pfdbzCMHB4XklZrD8NtHF8Pto8jqlQT7Sa+eOj+Zbiyd8prpJaX434/vMDj2rZlK80rPWaWS5yXJv6MULu34ou63X3NeK80jtVJx0zW61sv3++BDoJ5xyfD09AM5Q0kuvndrwf2ihTpWw/lnl0at+h0wj/nrxNFS9PQDB082+N/NR9C0aGbfSK6I6lA0jTAxhRNoUrGiRDYDQHLWr20JAysSmaOJVxAtGoaKRz2JTA6CGjONQ0UgM50jGdI6yGgOBwK2O6VNGUqQHMSXlTK4QIKypp6FyQOd02RhOqxVwTAxjJo1U7h0iuADVcmWbT1XiYK5dTA1hdd13XBkywyylGz4lE0XT8QMpbH+FqS4GLptaq3U60l06F1J8U+TQHHE0TN3BPWP9LIdFcbdUBjg3rJ8d5Pu9+/jHJ+hqqT4p+JZQfADFQ36Piuy/Qulx9L+GjNFHl5FlEDOMLaO3LcXUPDpoaKJZRAoof7LxgXSJAhRLEFZSASkc9WZNSfQ5K05cYLqwIqy6Lzf+AcNdz/8AVJcIe7X9yAHtpgzuWTAs4lHAsmTcDLCDYjCBRSLqoVcCMIGqZJgWUgNHEpKkSqhZTAwlRKOmddxYDiwsI7HBFXSQHMSjZ0SPdAZYVwIwI192xgYGXuxgZrhZOEDNJkps0wslRAomWTLqJKgwKJlkXUCyiBRFkWsSBVItYEgQGw2UkwEpGMpEzlp4nK6nkAqNPfhfkcdf3izWa5Wf6o6KixK63apap8v3mcVSco6PLS6Tavwtk10y5gclfbJLVNdY1l55oE1Ns4pdU4tebj5NgD6PCRY2wkOIGJNzRxIcAKqRKkMBGEC2Im5SwAvYYStxiAnARhJxEqQFcIzL4hcCuJk4i1xdARiJxDIZAMROIi6JuAxC4uSAvyJzFmLAASSBFibAkBYAhgAwUbuAbMpy8lcs3++RhOWUn0XmBFaVrHHtE8Lv4Pxz9fodG0vJPn6+hybTmrvTut9dJf1J/VAQ6jTurbkr92SekXwvu53XAiUozu1eMu7JZYlb4Wn3lyZw062bpysmm1eXdTeql+V+Ts+aipK17txcbRc3nKnwjUXxR4S+zyArtFPV2fOVO+fWN0/OwIq7Va3vFa+k0+zLpL1AH11xcoLgXFitxcC1iLC4uAwkYSbk3ArgIwF7i4FMAwF7i4FMBOAtcXArgJwE3FwIwE4SQAsgLE2AAkARYmwFgBIAAAhsAEQiJyAiciknbxCKN5vll4gRN5P6HPUl2W/zRNKzyRz1n/xt8HEC+0d19G/pL0ZxwkmnF6Wd+Kjle3TsvwZ23us9MWfyyieU24ytq07W4vPLxvJfzIDk26k83/EpZTW6cLd629W8vlMaW1JpYpYcKtGpq4L8M76x0zfK+5nobRDEozp3c4RxU+NWjrh+aLPH2inl72lprKKXd4tL8PLd0A2qNwbV40r6xnns8+cXnh6PwYOOltbSsrOP/nN2iucZbly0AH6DhFi4ApYWLgClhYuAK2FiwArYWLACLCxYARhFiQAsAABJAAkCwsAFiQAAAAC5UCbkAAJMxbJnIiP2AmTsumfiYvTqWrPJLi7+BWWsV09QMtqf78DGpnSqcs/Mvtj/AF+xFBXjOPFMCNnlijH88Gv5onF7SjpPdNOMra4lr42V/wCUvsNTsSW+nLF4bzp2impYoaKosUHwmB5NKrnhbw3krTWkKz0fyz+9zLaqTvKrTTU071qKyd/xw5/crUi02sN2lKLh+OOsqfVaotSq3wLF27f8NV5e9ivgl+ZcAPLrUI1O1TcYN6pvDTb32fwPigd20bMqknKDVGt/Eg1eE+dv1AH2wBIEAkgACQBBIAAAAAAAAJsBALWAEWJAAAAAAABDYbIAAMIAVmyzZhOQEXLLTqU4Iu9eiAxm7ztwshft+L+xWi7yvzFPvrpIDDbN3VlNiln++Bfbf7jloSs14r6MDNS93tEovuz+zO1RvGUPipu8Xvcdxx+3aeUKq3ZP7o0o18UIVlrFWmuQHP7QpYl71aqyqJaprSS5o8ufxXWJStKpCPxcKsODPoK3ZfvI5xl3keTt2zYe3HuN3TWtN8egHLKvFqPvXij/AA9pjv8Ayz4MkxzTbjhjJ5yhLOlU/MuYA+/BDAEggATcAAALE2AgEpEgRYmwAAEACQAAAAAAACGw2QADYIAIkESYFKkjImbKsC1PexJ9mTJjlEzru0AM9m/RkUu/H5WTs2/5SlN9uHRgV25dmXgzz1LN+EvDeeptMb3XFM8hvuvrFgelKCqUpQe9WPD9mbR7upKlPRtq3M9bYqu7wZ53/wBFsjTVaPLF14gehCWF+7l3ZZxf6GVRYG084PyMNg2lVqeFvtLTimdFOpe9Oeq0fEDzNt2K2cVjg3fDvi+QO2alTfGPAAfS2JJsLAQC1gBFibAAACAJBAAAkAAAABBIEEgACGCAABDYBskhAAZ1JF5MwmwKhgR1QGk9DHbHaKNam4w295IBs2/5TJuzg+EjXZNfAwr6dJAdNdfc8faYWlOPHNdT2p5xvxSZ5ftCPdnw1Awo1NHxyfzI9GyqQcZZ3VmeQnaTW6ecep27LW9GB89XhLZa2/C3lzR7VOpGvFNO0lozo9qbEq0Lb9Uz5ijWns83F31z9QPoadf4J5NeYM6dSFaK4gD6oEACQRcAACQIBIAAAAAQAJAAABgCrYbAAAAGyEQWAEANgUmzBl5szAm5NHVlWXobwJn3kc/tDRG8u8Ye0NEBXZHmuhFePfXiV2WWcTauu11QDZJXguWTMdop3Uo/QnYpWlOHijWst4HgSi7OPxQd0Xp1dJ+Ekbe0KeGSqLTecbeGV/gnryYHrbPW3fQ5Pa3s5VVdZSWjKU52dtz0Z3Uat8mB8hGpOhJp36egPpfaPs6NVaWfEAfTBgAAABKAAAAACAABIAAAACAAIYAAEMACEWZAAETAAwmUAAiRrQ0IAB94w9oaIADnofD1OradYgAcsP8AuR2Vt4AHBtvcZ5H8NgAWp9xHVSegAHdDQgAD/9k=");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
   </head>
   <body>
     <!-- Basic elements -->
 
     <!-- a (anchor) -->
-    <a href="https://www.linkedin.com/in/deepanshukhandelwal2006/">linkedin </a>
+    <a href="https://www.linkedin.com/in/deepanshukhandelwal2006/">LinkedIn</a>
 
     <!-- p (paragraph) -->
     <p>
@@ -20,10 +29,25 @@
       non soluta.
     </p>
 
-    <!-- span,div -->
-
-    <span>this is span</span>
+    <!-- span, div -->
+    <span>This is span</span>
     <div>This is container</div>
+
+    <!-- text formatting -->
+    <span><b>T</b></span
+    ><span><sub>e</sub></span
+    ><span
+      ><b><u>X</u></b></span
+    ><span><sup>t</sup></span>
+    <br />
+    <span><b>F</b></span
+    ><span>O</span><span>r</span><span><sup>m</sup></span
+    ><span
+      ><del><b>at</b></del></span
+    ><span><sup>t</sup></span
+    ><span
+      ><b><u>in</u></b></span
+    >
 
     <!-- H1-H6 -->
     <h1>Heading 1</h1>
@@ -33,17 +57,18 @@
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
 
-    <!-- strong,italic,bold,underline,list -->
-
+    <!-- strong, italic, bold, underline, list -->
     <strong>This is Strong</strong>
     <em>This is Italic</em>
     <b>This is Bold</b>
     <u>This is Underline</u>
+
     <ul>
       <li>Item 1</li>
       <li>Item 2</li>
       <li>Item 3</li>
     </ul>
+
     <!-- image -->
     <img
       src="https://images.unsplash.com/photo-1544894079-e81a9eb1da8b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
@@ -53,7 +78,6 @@
     />
 
     <!-- table -->
-
     <table>
       <tr>
         <th>Column 1</th>
@@ -72,12 +96,19 @@
       </tr>
     </table>
 
-    <!-- Attribute,classes,IDs -->
+    <!-- Attribute, classes, IDs -->
 
-    <div class="container">
-      <p id="my-id">
-        This is a paragraph with id "my-id" and class "container"
-      </p>
-    </div>
+    <p id="intro" class="text">This is a paragraph.</p>
+
+    <!-- ------------------------------------------------------------ -->
+
+    <!-- <ul>
+      <li>Facebook:</li>
+      <span
+        ><a href="https://developers.facebook.com/tools/debug/"
+          >SharingDebugger</a
+        ></span
+      >
+    </ul> -->
   </body>
 </html>
