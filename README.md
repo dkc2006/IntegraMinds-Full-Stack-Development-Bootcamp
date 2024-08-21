@@ -219,3 +219,20 @@ case 1:
 
 7. Functional Components => Normal Function or Arrow Function
 8. Functional Components Vs Class Component
+
+State
+Props
+
+- Parent to Child (Props)
+- Child to Parent (Callback/Event Handler)
+
+React Hooks
+
+- useState
+- useEffect
+- useContext
+- useReducer
+- useRef
+- useMemo
+- useCallback
+- ....
