@@ -6,22 +6,22 @@
     <title>React and JavaScript Example</title>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- <div id="root"></div> -->
 
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
+    <!-- <script -->
+    <!-- crossorigin -->
+    <!-- src="https://unpkg.com/react@18/umd/react.development.js" -->
+    <!-- ></script> -->
+    <!-- <script -->
+    <!-- crossorigin -->
+    <!-- src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" -->
+    <!-- ></script> -->
 
     <script>
       // Rendering a React element inside the #root div
-      const message = React.createElement("h1", {}, "Hello from React!");
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(message);
+      // const message = React.createElement("h1", {}, "Hello from React!");
+      // const root = ReactDOM.createRoot(document.getElementById("root"));
+      // root.render(message);
 
       /*const message = document.createElement("h2");
       message.innerHTML = "Hello JavaScript!";
@@ -62,6 +62,36 @@
 
       // Render the App component in the root div
       root.render(React.createElement(App, { name: "React App" }));*/
+
+      const fetchData = () => {
+        return new Promise((resolve, reject) => {
+          const success = true;
+          setTimeout(() => {
+            if (success) {
+              resolve("Data fetched successfully");
+            } else {
+              reject("Failed to fetch data");
+            }
+          }, 2000);
+        });
+      };
+
+      // Using the Promise
+      //fetchData()
+      //.then((result) => console.log(result));
+      //.catch(error => console.error(error));
+
+      // Using Async/Await
+
+      const getData = async () => {
+        try {
+          const result = await fetchData();
+          console.log(result);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      getData();
     </script>
   </body>
 </html>

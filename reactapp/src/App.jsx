@@ -32,22 +32,198 @@
 // }
 
 
-// import React from "react";
-import PostsFromServer from "./PostsFromServer";
+import UsersList from "./Users";
+import ErrorPage from "./error-page";
+import {
+  createBrowserRouter,
+  Link,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
+import ContactForm from "./ContactForm";
+import UserPage from "./UserPage";
+
+const HeaderBar = () => (
+  <nav>
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/users">Users</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact Us</Link>
+      </li>
+    </ul>
+  </nav>
+);
+
+const AppLayout = () => (
+  <>
+    <HeaderBar />
+    <main>
+      <Outlet />
+    </main>
+  </>
+);
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <>Home Page</>,
+      },
+      {
+        path: "/users",
+        element: <UsersList />,
+      },
+      {
+        path: "/user/:userId",
+        element: <UserPage />,
+      },
+      {
+        path: "/about",
+        element: <div>About Page</div>,
+      },
+      {
+        path: "/contact",
+        element: <ContactForm />,
+      },
+    ],
+  },
+]);
 
 const App = () => {
+  return <RouterProvider router={router} />;
+};
 
-  const onClickFromParent = (title) => {
-    console.log(`Clicked from parent: ${title}`);
-  };
+export default App;
 
-  return(
-    <>
-      {/* <StateExample/> */}
-      {/* <Posts/> */}
-      {/* <Profile/> */}
 
-      <PostsFromServer
+
+
+// import UsersList from "./Users";
+// import ErrorPage from "./error-page";
+
+// import {
+//   createBrowserRouter,
+//   Link,
+//   Outlet,
+//   RouterProvider,
+// } from "react-router-dom";
+// import ContactForm from "./ContactForm";
+// import UserPage from "./UserPage";
+
+// const HeaderBar = () => (
+//   <nav>
+//     <ul>
+//       <li>
+//         <Link to="/">Home</Link>
+//       </li>
+//       <li>
+//         <Link to="/users">Users</Link>
+//       </li>
+//       <li>
+//         <Link to="/about">About</Link>
+//       </li>
+//       <li>
+//         <Link to="/contact">Contact Us</Link>
+//       </li>
+//     </ul>
+//   </nav>
+// );
+
+// const AppLayout = () => (
+//   <>
+//     <HeaderBar />
+//     <main>
+//       <Outlet />
+//     </main>
+//   </>
+// );
+//  const App = () => {
+//   const router = createBrowserRouter([
+//     {
+//       path: "/",
+//       element: <AppLayout />,
+//       errorElement: <ErrorPage />,
+//       children: [
+//         {
+//           path: "/",
+//           element: <>Home Page</>,
+//         },
+//         {
+//           path: "/users",
+//           element: <UsersList />,
+//         },
+//         {
+//           path: "/user/:userId",
+//           element: <UserPage />,
+//         },
+//         {
+//           path: "/about",
+//           element: <div>About Page</div>,
+//         }
+//       ],
+//     },
+    
+
+// const router = createBrowserRouter([
+//     {
+//       path: "/",
+//       element: <AppLayout />,
+//       errorElement: <ErrorPage />,
+//       children: [
+//         {
+//           path: "/",
+//           element: <>Home Page</>,
+//         },
+//         {
+//           path: "/users",
+//           element: <UsersList />,
+//         },
+//         {
+//           path: "/user/:userId",
+//           element: <UserPage />,
+//         },
+//         {
+//           path: "/about",
+//           element: <div>About Page</div>,
+//         },
+//         {
+// return <RouterProvider router={router} />;
+// };
+
+// export default App;
+
+
+// import React from "react";
+// import PostsFromServer from "./PostsFromServer";
+
+// const App = () => {
+
+//   const onClickFromParent = (title) => {
+//     console.log(`Clicked from parent: ${title}`);
+//   };
+
+
+
+
+  // return(
+    // <>
+      // {/* <StateExample/> */}
+      // {/* <Posts/> */}
+      // {/* <Profile/> */}
+
+      /* <PostsFromServer
         title="Posts List 1"
         onClickFromParent={onClickFromParent}
       />
@@ -71,9 +247,9 @@ const App = () => {
         title="Posts List 5"
         onClickFromParent={onClickFromParent}
       />
-    </>
-  );
-};
+    </> *///}
+  // );
+
 
 
 
@@ -159,4 +335,4 @@ const App = () => {
 
 
 // export  {sampleFunction};
-export default App;
+// export default App;
