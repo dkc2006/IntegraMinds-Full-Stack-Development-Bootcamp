@@ -63,7 +63,7 @@
       // Render the App component in the root div
       root.render(React.createElement(App, { name: "React App" }));*/
 
-      const fetchData = () => {
+      /* const fetchData = () => {
         return new Promise((resolve, reject) => {
           const success = true;
           setTimeout(() => {
@@ -74,7 +74,7 @@
             }
           }, 2000);
         });
-      };
+      };*/
 
       // Using the Promise
       //fetchData()
@@ -83,7 +83,7 @@
 
       // Using Async/Await
 
-      const getData = async () => {
+      /*const getData = async () => {
         try {
           const result = await fetchData();
           console.log(result);
@@ -91,7 +91,20 @@
           console.error(error);
         }
       };
-      getData();
+      getData();*/
+
+      const createCounter = (start) => {
+        let count = start;
+        return () => count++;
+      };
+
+      const counter1 = createCounter(5);
+      const counter2 = createCounter(10);
+
+      console.log(counter1());
+      console.log(counter1());
+      console.log(counter2());
+      console.log(counter2());
     </script>
   </body>
 </html>
