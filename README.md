@@ -236,3 +236,64 @@ React Hooks
 - useMemo
 - useCallback
 - ....
+
+# Python
+
+# Python Flask
+
+### Mac
+
+```shell
+mkdir myproject
+cd myproject
+python3 -m venv .venv
+
+# To activate the virtual environment
+
+. .venv/bin/activate
+```
+
+### Windows
+
+```shell
+mkdir myproject
+cd myproject
+py -3 -m venv .venv
+
+# To activate the virtual environment
+.venv\Scripts\activate
+```
+
+#### To write the requirements.txt file
+
+```shell
+pip freeze > requirements.txt
+```
+
+#### To deactivate the virtual environment
+
+```shell
+deactivate
+```
+
+#### Update pip
+
+```shell
+pip install --upgrade pip
+```
+
+#### Install Flask
+
+After activating the virtual environment, you can install Flask using pip:
+
+```shell
+pip install Flask
+```
+
+#### Run the application
+
+```shell
+export FLASK_APP=hello.py
+export FLASK_ENV=development
+flask --app hello run --host=0.0.0.0 --debug
+```
