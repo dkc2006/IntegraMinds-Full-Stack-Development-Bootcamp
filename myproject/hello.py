@@ -95,6 +95,9 @@ def submit():
     return jsonify(response)
 
 
+            # if __name__ == "__main__":
+            #     app.run(debug=True)
+
 # Task 9: Handle POST request with form data
 @app.route("/submit_form", methods=["POST"])
 def submit_form():
