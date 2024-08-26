@@ -1,9 +1,52 @@
 {
-    "users" : [
-        {
-            "name": "john","age": 18}
-            {"name" : "Doe","age":20}
-            
-        
-    ]
+  "users": [
+    {
+      "id": "101",
+      "name": "John Doe",
+      "age": 30,
+      "dob": "1992-01-01",
+      "email": "john.doe@example.com",
+      "phone": "123-456-7890",
+      "address": "123 Main st",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10001"
+    },
+    {
+      "id": "102",
+      "name": "Jane Smith",
+      "age": 28,
+      "dob": "1994-05-15",
+      "email": "jane.smith@example.com",
+      "phone": "987-654-3210",
+      "address": "456 Elm St",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90001"
+    },
+    {
+      "id": "103",
+      "name": "Alice Johnson",
+      "age": 35,
+      "dob": "1987-12-25",
+      "email": "alice.johnson@example.com",
+      "phone": "555-555-5555",
+      "address": "789 Oak St",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60606"
+    },
+    {
+      "id": "200",
+      "name": "Bob Brown",
+      "age": 40,
+      "dob": "1982-07-10",
+      "email": "bob.brown@example.com",
+      "phone": "777-777-7777",
+      "address": "321 Maple St",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94101"
+    }
+  ]
 }

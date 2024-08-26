@@ -1,25 +1,29 @@
 const profile = {
     name: 'John Doe',
-    age: 30,
     email: "",
+    age: 30,
+    hobbies: ['reading', 'painting', 'cooking'],
     address: {
+        street: "123 Main St",
         city: 'New York',
         state: 'NY',
-        country: 'USA'
+        zip: "12345",
+        country: {
+            name: 'United States',
+            code: "US"
+        },
     },
-    hobbies: ['reading', 'painting', 'cooking'],
-    country:{
-        name: 'United States',
-        code:"US"
-    }
 };
 
 const {address:{country:{code:countryCode}}}=profile;
 
-console.log("Country Code: ", countryCode); // Logs the country code: US
+console.log("Code: ", Code); 
 
-console.log("🚀 ~ countryCode:", countryCode);
+console.log("🚀 ~ country:", country);
 
+console.log("address:", address);
+
+console.log("Country Code: ", countryCode); 
 
 
 // const {

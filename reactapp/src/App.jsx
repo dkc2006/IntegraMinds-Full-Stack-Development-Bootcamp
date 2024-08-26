@@ -31,8 +31,7 @@
 //   )
 // }
 
-
-import UsersList from "./Users";
+import UsersList from "./User";
 import ErrorPage from "./error-page";
 import {
   createBrowserRouter,
@@ -40,8 +39,11 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import ContactForm from "./ContactForm";
+import ContactForm from './ContactForm';
 import UserPage from "./UserPage";
+import LoginFormPage from "./Login";
+import HomePage from "./HomePage";
+import UseMemoDemoComponent1  from "./UseMemoEx2";
 
 const HeaderBar = () => (
   <nav>
@@ -56,7 +58,16 @@ const HeaderBar = () => (
         <Link to="/about">About</Link>
       </li>
       <li>
+        <Link to="/memo">useMemo</Link>
+      </li>
+      <li>
         <Link to="/contact">Contact Us</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+      <li>
+        <Link to="/register">Sign Up</Link>
       </li>
     </ul>
   </nav>
@@ -71,138 +82,56 @@ const AppLayout = () => (
   </>
 );
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <>Home Page</>,
-      },
-      {
-        path: "/users",
-        element: <UsersList />,
-      },
-      {
-        path: "/user/:userId",
-        element: <UserPage />,
-      },
-      {
-        path: "/about",
-        element: <div>About Page</div>,
-      },
-      {
-        path: "/contact",
-        element: <ContactForm />,
-      },
-    ],
-  },
-]);
-
-const App = () => {
+// Corrected function definition for App
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <AppLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/users",
+          element: <UsersList />,
+        },
+        {
+          path: "/memo",
+          element: <UseMemoDemoComponent1 />,
+        },
+        {
+          path: "/user/:userId",
+          element: <UserPage />,
+        },
+        {
+          path: "/about",
+          element: <div>About Page</div>,
+        },
+        {
+          path: "/contact",
+          element: <ContactForm />,
+        },
+        {
+          path: "/login",
+          element: <LoginFormPage />,
+        },
+        {
+          path: "/register",
+          element: <div>Register Page</div>,
+        }
+      ],
+    },
+  ]);
   return <RouterProvider router={router} />;
-};
+}
 
 export default App;
 
 
 
-
-// import UsersList from "./Users";
-// import ErrorPage from "./error-page";
-
-// import {
-//   createBrowserRouter,
-//   Link,
-//   Outlet,
-//   RouterProvider,
-// } from "react-router-dom";
-// import ContactForm from "./ContactForm";
-// import UserPage from "./UserPage";
-
-// const HeaderBar = () => (
-//   <nav>
-//     <ul>
-//       <li>
-//         <Link to="/">Home</Link>
-//       </li>
-//       <li>
-//         <Link to="/users">Users</Link>
-//       </li>
-//       <li>
-//         <Link to="/about">About</Link>
-//       </li>
-//       <li>
-//         <Link to="/contact">Contact Us</Link>
-//       </li>
-//     </ul>
-//   </nav>
-// );
-
-// const AppLayout = () => (
-//   <>
-//     <HeaderBar />
-//     <main>
-//       <Outlet />
-//     </main>
-//   </>
-// );
-//  const App = () => {
-//   const router = createBrowserRouter([
-//     {
-//       path: "/",
-//       element: <AppLayout />,
-//       errorElement: <ErrorPage />,
-//       children: [
-//         {
-//           path: "/",
-//           element: <>Home Page</>,
-//         },
-//         {
-//           path: "/users",
-//           element: <UsersList />,
-//         },
-//         {
-//           path: "/user/:userId",
-//           element: <UserPage />,
-//         },
-//         {
-//           path: "/about",
-//           element: <div>About Page</div>,
-//         }
-//       ],
-//     },
-    
-
-// const router = createBrowserRouter([
-//     {
-//       path: "/",
-//       element: <AppLayout />,
-//       errorElement: <ErrorPage />,
-//       children: [
-//         {
-//           path: "/",
-//           element: <>Home Page</>,
-//         },
-//         {
-//           path: "/users",
-//           element: <UsersList />,
-//         },
-//         {
-//           path: "/user/:userId",
-//           element: <UserPage />,
-//         },
-//         {
-//           path: "/about",
-//           element: <div>About Page</div>,
-//         },
-//         {
-// return <RouterProvider router={router} />;
-// };
-
-// export default App;
 
 
 // import React from "react";

@@ -1,0 +1,22 @@
+.home {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.child{
+    background-color: #0b0b72;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grandchild{
+    background-color: #800000;
+    color: hsl(0,0%,100%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+}
