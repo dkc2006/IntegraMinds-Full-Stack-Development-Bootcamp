@@ -1,15 +1,14 @@
-import React, { createContext, useContext } from "react";
+import React from "react";
 import "./home.css";
 
-// Create the context
+// Creating the context (although it's not being used in this implementation)
 const SessionContext = createContext({});
 
 // Grandchild component that consumes the session data
-const GrandChild1 = ({ title }) => {
-    console.log("🚀 ~ GrandChild1 ~ title:", title);
+const GrandChild1 = (props) => {
+    console.log("🚀 ~ GrandChild1 ~ props:", props);
 
-    const session = useContext(SessionContext); // Accessing context data
-    console.log("🚀 ~ GrandChild1 ~ session:", session);
+    const { session } = props;
 
     return (
         <div className="grand-child">
@@ -20,19 +19,22 @@ const GrandChild1 = ({ title }) => {
     );
 };
 
-// Child component that renders GrandChild1
+// Child component that passes session data to GrandChild1
 const Child1 = (props) => {
     console.log("🚀 ~ Child1 ~ props:", props);
+
+    const { session } = props;
+
     return (
         <div className="child">
             <h2>Child 1</h2>
             <p>This is child 1</p>
-            <GrandChild1 title="Title: Grand Child 1" />
+            <GrandChild1 session={session} title="Title: Grand Child 1" />
         </div>
     );
 };
 
-// Home page component that provides the session context
+// Home page component that provides session data to Child1
 const HomePage = () => {
     const session = {
         id: 501,
@@ -47,9 +49,7 @@ const HomePage = () => {
         <div className="home">
             <h1>Home Page</h1>
             <p>Welcome to the home page!</p>
-            <SessionContext.Provider value={session}>
-                <Child1 />
-            </SessionContext.Provider>
+            <Child1 session={session} />
         </div>
     );
 };

@@ -33,8 +33,8 @@
     Main URL: https://jsonplaceholder.typicode.com/ -------------------------------- - JSON Placeholder - 1 (users) - https://jsonplaceholder.typicode.com/users -------------------------------- - JSON Placeholder - 1 (comments) - https://jsonplaceholder.typicode.com/comments -------------------------------- - JSON Placeholder - 1 (photos) - https://jsonplaceholder.typicode.com/photos -------------------------------- - JSON Placeholder - 1 (todos) - https://jsonplaceholder.typicode.com/todos -------------------------------------- - JSON Placeholder - 1 (albums) - https://jsonplaceholder.typicode.com/albums -----------------------------------
 33. Normal Function & Arrow Functions [No Arguments, With Arguments, With Return, Implicit Return] -------------------------------- -->
 
-Exercise 1: User Component
-Exercise #2: List the users
+Exercise # 1: User Component
+Exercise # 2: List the users
 
 Exercise #3:
 https://www.npmjs.com/package/json-server
