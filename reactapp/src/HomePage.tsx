@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext } from 'react';
 import "./home.css";
 
 // Use context provider to pass the session data to the grandchild component
@@ -6,14 +6,14 @@ import "./home.css";
 const SessionContext = createContext({});
 
 const GrandChild1 = ({ title }) => {
-    console.log("🚀 ~ GrandChild1 ~ GrandChild1:", GrandChild1);
+    console.log("🚀 ~ GrandChild1 ~ title:", title);
 
     const session = useContext(SessionContext);
     console.log("🚀 ~ GrandChild1 ~ session:", session);
 
     return (
         <div className="grand-child">
-            <h3>Grand Child 1</h3>
+            <h3>{title}</h3>
             <p>This is grand child 1</p>
             <pre>{JSON.stringify(session, null, 2)}</pre>
         </div>
@@ -37,8 +37,6 @@ const HomePage = () => {
         id: 501,
         name: "John Doe",
         age: 30,
-        role: "Admin",
-        status: "Active",
         dob: "01-Jan-2015",
     };
 
@@ -53,4 +51,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage
+export default HomePage;

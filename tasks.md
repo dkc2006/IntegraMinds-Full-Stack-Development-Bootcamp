@@ -143,3 +143,39 @@ theme contexter
 - use ref
 - context
 - routing
+
+React Reference Error 1 ---------------------------------------
+E2: Invalid Package - Failed to resolve import ----------------------------------
+E3: Unterminated string constant. -----------------------
+E4: ReferenceError: viteLogo is not define-------------------------
+E5: Unexpected token, expected ","-----------------------------
+E6: Unterminated JSX contents.-------------------------
+E7: Identifier 'XXXX' has already been declared.------------------------
+Fragment & Empty Tag -----> User.tsx
+Array - JSX ----> spread.js
+Destru.. --------> Destructuring.jsx or spread.js
+Use State -----> """""
+useEffect -------> """"""""
+UserComponent - Props & Event Handler ------> user.tsx or users.tsx
+Exercise #2: List the users
+Mock JSON server
+Fetch the users data from mock server and complete all the 4 states
+4 Pages with one dynam
+Login page ----> Login.tsx
+Users List -> Profile View (Dynamic Path)
+Contact Form --------> ContactForm.tsx
+Login form -----> Login.tsx
+useMemo --------> UseMemoEx1.tsx or UseMemoEx2.tsx
+useContext -------------> useContextEx1.jsx
+Routing
+Theme Context Provider
+useRef ------------> Login.tsx
+python - variables --------> Day-10/getting-started.py
+if, elif, else ------------> if.py
+comment ---------------> comment.py
+list - iterate -> iterate.py
+dict-iterate --> dict.py
+task 1 ---------> iterate.py
+task 2 ---------> """""
+task 3 ---------> """""
+task 4 ---------> """""

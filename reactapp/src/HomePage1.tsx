@@ -34,7 +34,7 @@ const Child1 = (props) => {
 
 const HomePage = () => {
     const session = {
-        id: 1,
+        id: "501",
         name: 'John Doe',
         email: 'johndoe@example.com',
         dob: "01-Jan-1990",
@@ -44,6 +44,7 @@ const HomePage = () => {
         <div className="home">
             <h1>Home Page</h1>
             <p>Welcome to the home page!</p>
+            
             <Child1 session={session} />
         </div>
     );
