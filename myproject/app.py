@@ -44,6 +44,14 @@ def home():
             "payload": {}}    
 
 
+# Render Templates in Flask
+
+# Keep the templates in the templates folder
+
+@app.route("/services")
+def services():
+    # Services html inside the templates folder
+    return render_template("services.html",title="Services")
 # update document using post id
 
 @app.route("/post/add",methods=["POST"])
@@ -65,8 +73,35 @@ def PostAdd():
     print(f"data.decode('utf-8'): {data_json}")
     
     print(f"data_json['author']: {data_json['author']}")
-
     
+    json_data = request.json
+    print("🚀 ~ json_data:", json_data)
+    
+    print(f"json_data['author']:{json_data['author']}")
+    print(f"json_data['text']:{json_data['text']}")
+    print(f"json_data['tags']:{json_data['tags']}")
+    print(f"json_data['random_number']:{json_data['random_number']}")
+
+    return {
+        "status": 1,
+        "message": "Post Updated!",
+        "payload": {}
+    }
+    
+@app.route("/contact/save",methods=["POST"])
+
+def SaveContactUsForm():
+    json_data = request.json
+    print(" ~ json_data:", json_data)
+    
+    db.queries.insert_one(json_data)
+    
+    return {
+        "status": 1,
+        "message": "Contact Us Form Saved!",
+        "payload": {}
+    }
+
 # @app.route("/")
 # def hello_world():
 #     return {
