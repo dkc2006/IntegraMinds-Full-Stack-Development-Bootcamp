@@ -1,11 +1,14 @@
-# from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import json
-from flask import Flask, request
+
+# from flask import Flask, request
 from pymongo import MongoClient
 from bson import ObjectId
 from encode import CustomJSONEncoder
-from flask_cors import CORS,cross_origin
 
+from flask_cors import CORS
+
+app = Flask(__name__)
 
 # from json import JSONEncoder
 client = MongoClient("mongodb://localhost:27017/")
@@ -13,7 +16,6 @@ client = MongoClient("mongodb://localhost:27017/")
 # a1 is the database name
 db = client.a1
 
-app = Flask(__name__)
 
 app.json_encoder = CustomJSONEncoder
 CORS(app)
@@ -56,6 +58,7 @@ def services():
 
 @app.route("/post/add",methods=["POST"])
 def PostAdd():
+    
     form = request.form
     print("form:",form)
     
@@ -100,7 +103,8 @@ def SaveContactUsForm():
         "status": 1,
         "message": "Contact Us Form Saved!",
         "payload": {}
-    }
+    } 
+
 
 # @app.route("/")
 # def hello_world():
@@ -110,38 +114,38 @@ def SaveContactUsForm():
 #         "payload": {}
 #     }
 
-# # Static path
-# @app.route("/about")
-# def about():
-#     return {
-#         "title": "About",
-#         "message": "This is a simple API built using Flask!"
-#     }
+# Static path
+@app.route("/about")
+def about():
+    return {
+        "title": "About",
+        "message": "This is a simple API built using Flask!"
+    }
 
 # # Dynamic path for profile by ID
 
 # # http://127.0.0.1:5000/profile/1010101
 
-# @app.route("/profile/<profileId>")
-# def profile(profileId):
-#     return {
-#         "status": 1,
-#         "message": "profile!",
-#         "payload": {"profileId": profileId}
-#     }
+@app.route("/profile/<profileId>")
+def profile(profileId):
+    return {
+        "status": 1,
+        "message": "profile!",
+        "payload": {"profileId": profileId}
+    }
 
-# # Dynamic path for profile with category
+# Dynamic path for profile with category
 
-# # http://127.0.0.1:5000/product/watch/101
-# # http://127.0.0.1:5000/product/mobile/105
+# http://127.0.0.1:5000/product/watch/101
+# http://127.0.0.1:5000/product/mobile/105
 
-# @app.route("/product/<categoryId>/<profileId>")
-# def product(categoryId, profileId):
-#     return {
-#         "status": 1,
-#         "message": "profile with category!",
-#         "payload": {"categoryId": categoryId, "profileId": profileId}
-#     }
+@app.route("/product/<categoryId>/<profileId>")
+def product(categoryId, profileId):
+    return {
+        "status": 1,
+        "message": "profile with category!",
+        "payload": {"categoryId": categoryId, "profileId": profileId}
+    }
 
 # # Accessing query parameters
 

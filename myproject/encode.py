@@ -2,8 +2,8 @@ import json
 
 from bson import ObjectId
 
-class JSONEncoder(json.JSONEncoder):
-    def default(self, 0):
-        if isinstance(0,ObjectId):
-            return str(0)
-        return json.
+class CustomJSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, ObjectId):
+            return str(o)
+        return json.JSONEncoder.default(self, o) 

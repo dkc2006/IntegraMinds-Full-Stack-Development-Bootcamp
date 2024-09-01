@@ -75,6 +75,3 @@ db.users.updateOne(
 // db.users.find({_id: {$gte:5}}).limit(3)
 db.users.find({_id: {$gte:5}}).limit(3).sort({_id:-1})
 
-
-
-
