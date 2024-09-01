@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register-Form</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <form action="/submit_registration" method="get">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password:</label>
+      <input type="text" id="password" name="password" required />
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="text" id="dob" name="dob" />
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+
+      <label for="hobbies">Hobbies:</label>
+      <input type="checkbox" id="sports" name="hobbies" value="sports" />
+      <label for="sports">Sports</label>
+      <input type="checkbox" id="reading" name="hobbies" value="reading" />
+      <label for="reading">Reading</label>
+      <input type="checkbox" id="music" name="hobbies" value="music" />
+      <label for="music">Listening to Music</label>
+      <label for="profile_picture">Profile Picture:</label>
+      <input type="file" id="profile_picture" name="profile_picture" />
+
+      <label for="bio">Biography:</label>
+      <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
